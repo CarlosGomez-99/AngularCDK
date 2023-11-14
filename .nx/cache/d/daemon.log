@@ -35,3 +35,18 @@
 [NX Daemon Server] - 2023-11-14T23:33:28.231Z - Time taken for 'total for creating and serializing project graph' 0.14499998092651367ms
 [NX Daemon Server] - 2023-11-14T23:33:28.232Z - Done responding to the client project-graph
 [NX Daemon Server] - 2023-11-14T23:33:28.232Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2023-11-14T23:33:28.497Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-14T23:33:28.547Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-11-14T23:33:28.548Z - [WATCHER]: 4 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2023-11-14T23:33:28.665Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-11-14T23:33:28.665Z - [REQUEST]: src/app/pages/login/prueba.component.css,src/app/pages/login/prueba.component.spec.ts,src/app/pages/login/prueba.component.ts,src/app/pages/login/prueba.component.html
+[NX Daemon Server] - 2023-11-14T23:33:28.665Z - [REQUEST]: 
+[NX Daemon Server] - 2023-11-14T23:33:28.722Z - Time taken for 'hash changed files from watcher' 0.48050010204315186ms
+[NX Daemon Server] - 2023-11-14T23:33:42.059Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2023-11-14T23:33:42.060Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-11-14T23:33:42.123Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-11-14T23:33:42.124Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2023-11-14T23:33:42.270Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-11-14T23:33:42.270Z - [REQUEST]: 
+[NX Daemon Server] - 2023-11-14T23:33:42.270Z - [REQUEST]: src/app/pages/login/prueba.component.css,src/app/pages/login/prueba.component.html,src/app/pages/login/prueba.component.spec.ts,src/app/pages/login/prueba.component.ts
+[NX Daemon Server] - 2023-11-14T23:33:42.322Z - Time taken for 'hash changed files from watcher' 0.10230004787445068ms
