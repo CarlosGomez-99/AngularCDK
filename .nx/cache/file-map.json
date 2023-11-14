@@ -1,0 +1,355 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.1.2",
+  "deps": {
+    "@angular/animations": "^16.2.0",
+    "@angular/cdk": "^16.2.12",
+    "@angular/common": "^16.2.0",
+    "@angular/compiler": "^16.2.0",
+    "@angular/core": "^16.2.0",
+    "@angular/forms": "^16.2.0",
+    "@angular/platform-browser": "^16.2.0",
+    "@angular/platform-browser-dynamic": "^16.2.0",
+    "@angular/router": "^16.2.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.13.0",
+    "@angular-devkit/build-angular": "^16.2.8",
+    "@angular-devkit/core": "^16.2.8",
+    "@angular-devkit/schematics": "^16.2.8",
+    "@angular/cli": "^16.2.8",
+    "@angular/compiler-cli": "^16.2.0",
+    "@nx/angular": "17.1.2",
+    "@nx/workspace": "17.1.2",
+    "@schematics/angular": "^16.2.8",
+    "@tailwindcss/forms": "^0.5.6",
+    "@types/jasmine": "~4.3.0",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "nx": "17.1.2",
+    "tailwindcss": "^3.3.5",
+    "typescript": "~5.1.3"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "trello-clone": [
+        {
+          "file": ".editorconfig",
+          "hash": "6686520031028425313"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "13044518069027839699"
+        },
+        {
+          "file": ".nx/cache/d/daemon.log",
+          "hash": "4972593075882515522"
+        },
+        {
+          "file": ".nx/cache/d/server-process.json",
+          "hash": "4591533848084102698"
+        },
+        {
+          "file": ".nx/cache/file-map.json",
+          "hash": "4274495741765314866"
+        },
+        {
+          "file": ".nx/cache/lockfile.hash",
+          "hash": "12138463422937911513"
+        },
+        {
+          "file": ".nx/cache/parsed-lock-file.json",
+          "hash": "13310492429344384328"
+        },
+        {
+          "file": ".nx/cache/project-graph.json",
+          "hash": "13130237401680311904"
+        },
+        {
+          "file": ".vscode/extensions.json",
+          "hash": "12343942279124280405"
+        },
+        {
+          "file": ".vscode/launch.json",
+          "hash": "17038929134016848735"
+        },
+        {
+          "file": ".vscode/tasks.json",
+          "hash": "5336636969995539451"
+        },
+        {
+          "file": "README.md",
+          "hash": "11396867625052828279"
+        },
+        {
+          "file": "nx.json",
+          "hash": "4812785918937702931"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "6427709442674591381"
+        },
+        {
+          "file": "package.json",
+          "hash": "6340370041126048281",
+          "deps": [
+            "npm:@angular/animations",
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/compiler",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/platform-browser",
+            "npm:@angular/platform-browser-dynamic",
+            "npm:@angular/router",
+            "npm:rxjs",
+            "npm:tslib",
+            "npm:zone.js",
+            "npm:@angular-devkit/build-angular",
+            "npm:@angular-devkit/core",
+            "npm:@angular-devkit/schematics",
+            "npm:@angular/cli",
+            "npm:@angular/compiler-cli",
+            "npm:@nx/angular",
+            "npm:@nx/workspace",
+            "npm:@schematics/angular",
+            "npm:@tailwindcss/forms",
+            "npm:@types/jasmine",
+            "npm:jasmine-core",
+            "npm:karma",
+            "npm:karma-chrome-launcher",
+            "npm:karma-coverage",
+            "npm:karma-jasmine",
+            "npm:karma-jasmine-html-reporter",
+            "npm:nx",
+            "npm:tailwindcss",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "project.json",
+          "hash": "7253713430100084613"
+        },
+        {
+          "file": "src/app/app-routing.module.ts",
+          "hash": "15565596748363482164",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/app.component.html",
+          "hash": "16498897523005705592"
+        },
+        {
+          "file": "src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/app.component.spec.ts",
+          "hash": "3518691910205502345",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "hash": "6587961351253106387",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/app.module.ts",
+          "hash": "6552464706350233133",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "src/app/pages/login/login.component.html",
+          "hash": "11589885435811093166"
+        },
+        {
+          "file": "src/app/pages/login/login.component.ts",
+          "hash": "3372783390238195373",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/assets/images/logo/horizontal-logo-gradient-blue-atlassian.png",
+          "hash": "1787598455072191958"
+        },
+        {
+          "file": "src/assets/images/logo/horizontal-logo-gradient-neutral-atlassian.png",
+          "hash": "5897353750536963510"
+        },
+        {
+          "file": "src/assets/images/logo/horizontal-logo-gradient-white-atlassian.png",
+          "hash": "16430444851739809488"
+        },
+        {
+          "file": "src/assets/images/logo/horizontal-logo-onecolor-blue-atlassian.png",
+          "hash": "14447933523001702717"
+        },
+        {
+          "file": "src/assets/images/logo/horizontal-logo-onecolor-neutral-atlassian.png",
+          "hash": "1822098761087304179"
+        },
+        {
+          "file": "src/assets/images/logo/horizontal-logo-onecolor-white-atlassian.png",
+          "hash": "16948975838676716513"
+        },
+        {
+          "file": "src/assets/images/logo/mark-gradient-blue-atlassian.png",
+          "hash": "6490338763477757731"
+        },
+        {
+          "file": "src/assets/images/logo/mark-gradient-neutral-atlassian.png",
+          "hash": "8394064817615355597"
+        },
+        {
+          "file": "src/assets/images/logo/mark-gradient-white-atlassian.png",
+          "hash": "11412108340614796681"
+        },
+        {
+          "file": "src/assets/images/logo/mark-onecolor-blue-atlassian.png",
+          "hash": "16448607280855495790"
+        },
+        {
+          "file": "src/assets/images/logo/mark-onecolor-neutral-atlassian.png",
+          "hash": "9768186253985273815"
+        },
+        {
+          "file": "src/assets/images/logo/mark-onecolor-white-atlassian.png",
+          "hash": "8173318106487157788"
+        },
+        {
+          "file": "src/assets/images/logo/strapline-logo-gradient-blue-atlassian.png",
+          "hash": "14989185391915699688"
+        },
+        {
+          "file": "src/assets/images/logo/strapline-logo-gradient-neutral-atlassian.png",
+          "hash": "15784149104996193313"
+        },
+        {
+          "file": "src/assets/images/logo/strapline-logo-gradient-white-atlassian.png",
+          "hash": "6628963520665311819"
+        },
+        {
+          "file": "src/assets/images/logo/strapline-logo-onecolor-blue-atlassian.png",
+          "hash": "17544470391241822196"
+        },
+        {
+          "file": "src/assets/images/logo/strapline-logo-onecolor-neutral-atlassian.png",
+          "hash": "1926066759215793333"
+        },
+        {
+          "file": "src/assets/images/logo/strapline-logo-onecolor-white-atlassian.png",
+          "hash": "9115114695081413625"
+        },
+        {
+          "file": "src/assets/images/logo/trello-logo-gradient-blue-attribution_rgb@2x.png",
+          "hash": "2730421477042987189"
+        },
+        {
+          "file": "src/assets/images/logo/trello-logo-gradient-neutral-attribution_rgb@2x.png",
+          "hash": "14287548665222519270"
+        },
+        {
+          "file": "src/assets/images/logo/trello-logo-gradient-white-attribution_rgb@2x.png",
+          "hash": "8707153689308111475"
+        },
+        {
+          "file": "src/assets/images/logo/vertical-logo-gradient-blue-atlassian.png",
+          "hash": "13787343949248991918"
+        },
+        {
+          "file": "src/assets/images/logo/vertical-logo-gradient-neutral-atlassian.png",
+          "hash": "8941858928562923242"
+        },
+        {
+          "file": "src/assets/images/logo/vertical-logo-gradient-white-atlassian.png",
+          "hash": "3673728500616926368"
+        },
+        {
+          "file": "src/assets/images/logo/vertical-logo-onecolor-blue-atlassian.png",
+          "hash": "1203516467700295621"
+        },
+        {
+          "file": "src/assets/images/logo/vertical-logo-onecolor-neutral-atlassian.png",
+          "hash": "4875100259798558469"
+        },
+        {
+          "file": "src/assets/images/logo/vertical-logo-onecolor-white-atlassian.png",
+          "hash": "17413753734603957889"
+        },
+        {
+          "file": "src/assets/svg/undraw_pair_programming_re_or4x.svg",
+          "hash": "14944503377470274939"
+        },
+        {
+          "file": "src/assets/svg/undraw_team_collaboration_re_ow29.svg",
+          "hash": "3724354212514953707"
+        },
+        {
+          "file": "src/assets/svg/undraw_to_the_moon_re_q21i.svg",
+          "hash": "1359436368572943239"
+        },
+        {
+          "file": "src/favicon.ico",
+          "hash": "3464744996580215640"
+        },
+        {
+          "file": "src/index.html",
+          "hash": "4494898164058722184"
+        },
+        {
+          "file": "src/main.ts",
+          "hash": "12246588107753938993",
+          "deps": [
+            "npm:@angular/platform-browser-dynamic"
+          ]
+        },
+        {
+          "file": "src/styles.scss",
+          "hash": "12991726714479872705"
+        },
+        {
+          "file": "tailwind.config.js",
+          "hash": "7723161329971196521",
+          "deps": [
+            "npm:@tailwindcss/forms"
+          ]
+        },
+        {
+          "file": "tsconfig.app.json",
+          "hash": "17337579397915052279"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "1047940026627514556"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "15575553540147145788"
+        }
+      ]
+    }
+  }
+}
