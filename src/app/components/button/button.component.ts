@@ -1,22 +1,19 @@
-import { Component, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html'
 })
-export class ButtonComponent implements OnChanges {
+export class ButtonComponent {
 
   @Input() type: 'button' | 'submit' | 'reset' = 'button';
   @Input() color: string = 'primary';
-  classButton: string = '';
 
-  ngOnChanges(changes: SimpleChanges) {
-    const color: SimpleChange = changes['color']?.currentValue;
-
-    if (color) {
-      this.classButton = `bg-${this.color}-700 hover:bg-${this.color}-800`;
-      console.log(this.classButton);
-    }
+  getButtonClass() {
+    return {
+      'bg-blue-700 hover:bg-blue-800': this.color === 'primary',
+      'bg-green-700 hover:bg-green-800': this.color === 'success',
+      'bg-gray-700 hover:bg-gray-800': this.color === 'gray',
+    };
   }
 }
