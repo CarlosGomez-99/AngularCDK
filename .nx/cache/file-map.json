@@ -170,7 +170,7 @@
         },
         {
           "file": "src/app/app.module.ts",
-          "hash": "6552464706350233133",
+          "hash": "6142117361804896732",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/platform-browser"
@@ -178,7 +178,7 @@
         },
         {
           "file": "src/app/pages/login/login.component.html",
-          "hash": "13127707677740130166"
+          "hash": "3369436131373542259"
         },
         {
           "file": "src/app/pages/login/login.component.ts",
@@ -332,8 +332,9 @@
         },
         {
           "file": "tailwind.config.js",
-          "hash": "7723161329971196521",
+          "hash": "14382961213380039744",
           "deps": [
+            "npm:tailwindcss",
             "npm:@tailwindcss/forms"
           ]
         },
@@ -348,6 +349,18 @@
         {
           "file": "tsconfig.spec.json",
           "hash": "15575553540147145788"
+        },
+        {
+          "file": "src/app/components/button/button.component.html",
+          "hash": "3316303064732038044"
+        },
+        {
+          "file": "src/app/components/button/button.component.ts",
+          "hash": "1970791001278115600",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
         }
       ]
     }
