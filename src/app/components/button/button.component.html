@@ -1,6 +1,8 @@
 <button
-  type="submit"
-  class="text-white w-full font-medium rounded text-sm bg-success-700 py-2"
+  [type]="type"
+  class="text-white w-full px-5 py-2 mb-6 font-medium rounded text-sm {{
+    classButton
+  }} focus:right-4"
 >
   <ng-content></ng-content>
 </button>
