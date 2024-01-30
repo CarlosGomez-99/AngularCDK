@@ -1,2 +1,62 @@
 <app-navbar></app-navbar>
-<h1>Boards page</h1>
+<main class="container mx-auto md:flex">
+    <aside class="hidden w-64 px-4 pt-10 md:block">
+      <ul class="space-y-1">
+        <li>
+          <a
+            class="text flex rounded py-1.5 text-sm font-medium transition duration-200 ease-out hover:bg-gray-200 hover:ease-in active:bg-sky-100 active:text-sky-500"
+            href=""
+            ><fa-icon class="mx-2" [icon]="faTrello"></fa-icon>
+            <p>Boards</p></a
+          >
+        </li>
+        <li>
+          <a
+            class="flex rounded py-1.5 text-sm font-medium transition duration-200 ease-out hover:bg-gray-200 hover:ease-in active:bg-sky-100 active:text-sky-500"
+            href=""
+            ><fa-icon class="mx-2" [icon]="faBorderTopLeft"></fa-icon>
+            <p>Templates</p></a
+          >
+        </li>
+        <li>
+          <a
+            class="flex rounded py-1.5 text-sm font-medium transition duration-200 ease-out hover:bg-gray-200 hover:ease-in active:bg-sky-100 active:text-sky-500"
+            href=""
+            ><fa-icon class="mx-2" [icon]="faChartLine"></fa-icon>
+            <p>Home</p></a
+          >
+        </li>
+      </ul>
+    </aside>
+    <article class="w-full">
+      <section class="px-3">
+        <h3 class="pt-5 font-medium md:pt-10">
+          <fa-icon class="px-3" [icon]="faClock"></fa-icon> Recently viewed
+        </h3>
+        <div
+          class="my-4 grid grid-cols-[repeat(auto-fit,minmax(200px,_1fr))] gap-4"
+        >
+          <div
+            class="relative h-24 w-full rounded bg-blue-500 p-1.5 hover:cursor-pointer hover:opacity-75"
+          >
+            <p class="absolute font-semibold text-white">Demo</p>
+          </div>
+          <div
+            class="relative h-24 w-full rounded bg-blue-500 p-1.5 hover:cursor-pointer hover:opacity-75"
+          >
+            <p class="absolute font-semibold text-white">Proob</p>
+          </div>
+          <div
+            class="relative h-24 w-full rounded bg-blue-500 p-1.5 hover:cursor-pointer hover:opacity-75"
+          >
+            <p class="absolute font-semibold text-white">Proob</p>
+          </div>
+          <div
+            class="relative h-24 w-full rounded bg-blue-500 p-1.5 hover:cursor-pointer hover:opacity-75"
+          >
+            <p class="absolute font-semibold text-white">Proob</p>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>

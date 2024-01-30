@@ -14,6 +14,15 @@ module.exports = {
         red: colors.rose,
         pink: colors.fuchsia,
       },
+      container:{
+        screens: {
+          sm: "640px",
+          md: "768px",
+          lg: "1024px",
+          xl: "1024px",
+          '2xl': '1280px'
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/forms")],
