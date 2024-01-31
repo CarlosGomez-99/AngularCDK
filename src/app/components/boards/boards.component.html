@@ -1,62 +1,127 @@
 <app-navbar></app-navbar>
 <main class="container mx-auto md:flex">
-    <aside class="hidden w-64 px-4 pt-10 md:block">
-      <ul class="space-y-1">
-        <li>
-          <a
-            class="text flex rounded py-1.5 text-sm font-medium transition duration-200 ease-out hover:bg-gray-200 hover:ease-in active:bg-sky-100 active:text-sky-500"
-            href=""
-            ><fa-icon class="mx-2" [icon]="faTrello"></fa-icon>
-            <p>Boards</p></a
-          >
-        </li>
-        <li>
-          <a
-            class="flex rounded py-1.5 text-sm font-medium transition duration-200 ease-out hover:bg-gray-200 hover:ease-in active:bg-sky-100 active:text-sky-500"
-            href=""
-            ><fa-icon class="mx-2" [icon]="faBorderTopLeft"></fa-icon>
-            <p>Templates</p></a
-          >
-        </li>
-        <li>
-          <a
-            class="flex rounded py-1.5 text-sm font-medium transition duration-200 ease-out hover:bg-gray-200 hover:ease-in active:bg-sky-100 active:text-sky-500"
-            href=""
-            ><fa-icon class="mx-2" [icon]="faChartLine"></fa-icon>
-            <p>Home</p></a
-          >
-        </li>
-      </ul>
-    </aside>
-    <article class="w-full">
-      <section class="px-3">
-        <h3 class="pt-5 font-medium md:pt-10">
-          <fa-icon class="px-3" [icon]="faClock"></fa-icon> Recently viewed
-        </h3>
-        <div
-          class="my-4 grid grid-cols-[repeat(auto-fit,minmax(200px,_1fr))] gap-4"
+  <aside class="hidden w-64 px-4 pt-10 md:block">
+    <ul class="space-y-1 mb-10">
+      <li>
+        <a
+          class="text flex rounded py-1.5 text-sm font-medium transition duration-200 ease-out hover:bg-gray-200 hover:ease-in active:bg-sky-100 active:text-sky-500"
+          href=""
+          ><fa-icon class="mx-2" [icon]="faTrello"></fa-icon>
+          <p>Boards</p></a
         >
-          <div
-            class="relative h-24 w-full rounded bg-blue-500 p-1.5 hover:cursor-pointer hover:opacity-75"
-          >
-            <p class="absolute font-semibold text-white">Demo</p>
-          </div>
-          <div
-            class="relative h-24 w-full rounded bg-blue-500 p-1.5 hover:cursor-pointer hover:opacity-75"
-          >
-            <p class="absolute font-semibold text-white">Proob</p>
-          </div>
-          <div
-            class="relative h-24 w-full rounded bg-blue-500 p-1.5 hover:cursor-pointer hover:opacity-75"
-          >
-            <p class="absolute font-semibold text-white">Proob</p>
-          </div>
-          <div
-            class="relative h-24 w-full rounded bg-blue-500 p-1.5 hover:cursor-pointer hover:opacity-75"
-          >
-            <p class="absolute font-semibold text-white">Proob</p>
-          </div>
+      </li>
+      <li>
+        <a
+          class="flex rounded py-1.5 text-sm font-medium transition duration-200 ease-out hover:bg-gray-200 hover:ease-in active:bg-sky-100 active:text-sky-500"
+          href=""
+          ><fa-icon class="mx-2" [icon]="faBorderTopLeft"></fa-icon>
+          <p>Templates</p></a
+        >
+      </li>
+      <li>
+        <a
+          class="flex rounded py-1.5 text-sm font-medium transition duration-200 ease-out hover:bg-gray-200 hover:ease-in active:bg-sky-100 active:text-sky-500"
+          href=""
+          ><fa-icon class="mx-2" [icon]="faChartLine"></fa-icon>
+          <p>Home</p></a
+        >
+      </li>
+    </ul>
+
+    <cdk-accordion>
+      <cdk-accordion-item #accordionMenu="cdkAccordionItem">
+        <button
+          class="w-full py-1 px-2 flex justify-between items-center"
+          type="button"
+          (click)="accordionMenu.toggle()"
+        >
+          My Workspace
+          <fa-icon
+            [icon]="accordionMenu.expanded ? faAngleUp : faAngleDown"
+          ></fa-icon>
+        </button>
+        <div
+          [ngClass]="{
+            hidden: !accordionMenu.expanded,
+            block: accordionMenu.expanded
+          }"
+        >
+          <ul class="ml-2 flex flex-col text-sm text-gray-700">
+            <li>
+              <a class="block py-1 px-3"
+                ><fa-icon [icon]="faTrello"></fa-icon> Boards</a
+              >
+            </li>
+            <li>
+              <a class="block py-1 px-3"
+                ><fa-icon [icon]="faHeart"></fa-icon> Highlights</a
+              >
+            </li>
+            <li>
+              <a class="block py-1 px-3"
+                ><fa-icon [icon]="faBorderAll"></fa-icon> Views</a
+              >
+            </li>
+            <li>
+              <a class="block py-1 px-3"
+                ><fa-icon [icon]="faUsers"></fa-icon> Members</a
+              >
+            </li>
+            <li>
+              <a class="block py-1 px-3"
+                ><fa-icon [icon]="faGear"></fa-icon> Settings</a
+              >
+            </li>
+          </ul>
         </div>
-      </section>
-    </article>
-  </main>
+      </cdk-accordion-item>
+    </cdk-accordion>
+
+    <cdk-accordion>
+      <cdk-accordion-item
+        #accordionItem="cdkAccordionItem"
+        *ngFor="let item of items"
+      >
+        <button class="w-full text-left" type="button" (click)="accordionItem.toggle()">{{ item.label }}</button>
+        <div [style.display]="accordionItem.expanded ? '' : 'none'">
+          <ul>
+            <li *ngFor="let subItem of item.items">
+              {{ subItem.label }}
+            </li>
+          </ul>
+        </div>
+      </cdk-accordion-item>
+    </cdk-accordion>
+  </aside>
+  <article class="w-full">
+    <section class="px-3">
+      <h3 class="pt-5 font-medium md:pt-10">
+        <fa-icon class="px-3" [icon]="faClock"></fa-icon> Recently viewed
+      </h3>
+      <div
+        class="my-4 grid grid-cols-[repeat(auto-fit,minmax(200px,_1fr))] gap-4"
+      >
+        <div
+          class="relative h-24 w-full rounded bg-blue-500 p-1.5 hover:cursor-pointer hover:opacity-75"
+        >
+          <p class="absolute font-semibold text-white">Demo</p>
+        </div>
+        <div
+          class="relative h-24 w-full rounded bg-blue-500 p-1.5 hover:cursor-pointer hover:opacity-75"
+        >
+          <p class="absolute font-semibold text-white">Proob</p>
+        </div>
+        <div
+          class="relative h-24 w-full rounded bg-blue-500 p-1.5 hover:cursor-pointer hover:opacity-75"
+        >
+          <p class="absolute font-semibold text-white">Proob</p>
+        </div>
+        <div
+          class="relative h-24 w-full rounded bg-blue-500 p-1.5 hover:cursor-pointer hover:opacity-75"
+        >
+          <p class="absolute font-semibold text-white">Proob</p>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
