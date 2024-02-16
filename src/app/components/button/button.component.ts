@@ -11,9 +11,12 @@ export class ButtonComponent {
 
   getButtonClass() {
     return {
+      'text-white': this.color !== 'gray-light',
+      'text-gray-800': this.color === 'gray-light',
       'bg-blue-700 hover:bg-blue-800': this.color === 'primary',
       'bg-green-700 hover:bg-green-800': this.color === 'success',
       'bg-gray-700 hover:bg-gray-800': this.color === 'gray',
+      'bg-gray-200 hover:bg-gray-300': this.color === 'gray-light',
     };
   }
 }

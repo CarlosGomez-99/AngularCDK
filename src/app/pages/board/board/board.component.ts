@@ -6,6 +6,8 @@ import {
 } from '@angular/cdk/drag-drop';
 
 import { Column, ToDo } from '../../../models/todo.model';
+import { Dialog } from '@angular/cdk/dialog';
+import { TodoDialogComponent } from '../../../components/todo-dialog/todo-dialog.component';
 
 @Component({
   selector: 'app-board',
@@ -42,7 +44,6 @@ import { Column, ToDo } from '../../../models/todo.model';
   ],
 })
 export class BoardComponent {
-
   taskInputs: { [key: string]: string } = {};
 
   columns: Column[] = [
@@ -71,6 +72,8 @@ export class BoardComponent {
       ],
     },
   ];
+
+  constructor(private dialog: Dialog) {}
 
   drop($event: CdkDragDrop<ToDo[]>) {
     if ($event.previousContainer === $event.container) {
@@ -111,5 +114,18 @@ export class BoardComponent {
     }
 
     this.taskInputs[column.title] = '';
+  }
+
+  openDialog() {
+    this.dialog.open(TodoDialogComponent, {
+      width: '50%',
+      height: 'auto',
+      autoFocus: false,
+      data: {
+        title: 'Create a new task',
+        placeholder: 'Enter task title',
+        buttonText: 'Create task',        
+      },
+    });
   }
 }
