@@ -116,16 +116,18 @@ export class BoardComponent {
     this.taskInputs[column.title] = '';
   }
 
-  openDialog() {
-    this.dialog.open(TodoDialogComponent, {
+  openDialog(toDo: ToDo) { 
+   const dialogRef =  this.dialog.open(TodoDialogComponent, {
       width: '50%',
       height: 'auto',
       autoFocus: false,
       data: {
-        title: 'Create a new task',
-        placeholder: 'Enter task title',
-        buttonText: 'Create task',        
+        task: toDo,
       },
+    });
+
+    dialogRef.closed.subscribe((result) => {
+      console.log('Dialog was closed', result);
     });
   }
 }
