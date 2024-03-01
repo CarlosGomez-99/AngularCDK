@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-interface Product {
-  id: string;
-  images: string[];
-  title: string;
-  price: number;
-  description: string;
-}
+import { Product } from 'src/app/models/product.model';
 
 @Component({
   selector: 'app-scroll',
