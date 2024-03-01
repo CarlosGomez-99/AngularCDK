@@ -9,6 +9,7 @@ import { Product } from 'src/app/models/product.model';
 export class TableComponent {
   products: Product[] = [];
   columns = ['No', 'Referencia', 'Precio', 'Descripción', 'Imagenes'];
+  total = 0;
 
   constructor(private http: HttpClient) {}
 
@@ -16,7 +17,10 @@ export class TableComponent {
     this.http
       .get<Product[]>('https://api.escuelajs.co/api/v1/products')
       .subscribe((data) => {
-        this.products = data;        
+        this.products = data;
+        this.total = this.products
+          .map((product) => product.price)
+          .reduce((price, total) => price + total, 0);
       });
   }
 }
