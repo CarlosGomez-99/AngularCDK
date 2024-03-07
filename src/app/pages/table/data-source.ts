@@ -4,12 +4,14 @@ import { Product } from 'src/app/models/product.model';
 
 export class DataSourceProduct extends DataSource<Product> {
   data = new BehaviorSubject<Product[]>([]);
+  originalData: Product[] = [];
 
   connect(): Observable<Product[]> {
     return this.data;
   }
 
   init(data: Product[]) {
+    this.originalData = data;
     this.data.next(data);
   }
 
@@ -26,6 +28,13 @@ export class DataSourceProduct extends DataSource<Product> {
       products[productIndex] = { ...products[productIndex], ...changes };
       this.data.next(products);
     }
+  }
+
+  findProduct(query: string) {
+    const result = this.originalData.filter((product) => {
+      return product.title.toLowerCase().includes(query.toLowerCase());
+    });
+    this.data.next(result);
   }
 
   disconnect() {}

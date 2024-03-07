@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
 import { DataSourceProduct } from './data-source';
+import { FormControl } from '@angular/forms';
+import { debounce, debounceTime } from 'rxjs';
 
 @Component({
   selector: 'app-table',
@@ -18,6 +20,7 @@ export class TableComponent {
     'Acciones',
   ];
   total = 0;
+  input = new FormControl('', { nonNullable: true });
 
   constructor(private http: HttpClient) {}
 
@@ -28,6 +31,9 @@ export class TableComponent {
         this.products.init(data);
         this.total = this.products.getTotal();
       });
+    this.input.valueChanges.pipe(debounceTime(300)).subscribe((value) => {
+      this.findProduct(value);
+    });
   }
 
   editProduct(product: Product) {
@@ -39,5 +45,9 @@ export class TableComponent {
       this.products.data.value.filter((p) => p.id !== product.id)
     );
     this.total = this.products.getTotal();
+  }
+
+  findProduct(query: string) {
+    this.products.findProduct(query);
   }
 }
