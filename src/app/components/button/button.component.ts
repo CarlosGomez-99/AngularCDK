@@ -2,21 +2,51 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button',
-  templateUrl: './button.component.html'
+  templateUrl: './button.component.html',
 })
 export class ButtonComponent {
-
   @Input() type: 'button' | 'submit' | 'reset' = 'button';
-  @Input() color: string = 'primary';
+  @Input() color: 'success' | 'primary' | 'danger' | 'sky' | 'light' =
+    'primary';
+
+  mapColors = {
+    success: {
+      'bg-success-700': true,
+      'hover:bg-success-800': true,
+      'focus:ring-success-300': true,
+      'text-white': true,
+    },
+    primary: {
+      'bg-primary-700': true,
+      'hover:bg-primary-800': true,
+      'focus:ring-primary-300': true,
+      'text-white': true,
+    },
+    danger: {
+      'bg-danger-700': true,
+      'hover:bg-danger-800': true,
+      'focus:ring-danger-300': true,
+      'text-white': true,
+    },
+    sky: {
+      'bg-sky-700': true,
+      'hover:bg-sky-800': true,
+      'focus:ring-sky-300': true,
+      'text-white': true,
+    },
+    light: {
+      'bg-gray-200': true,
+      'hover:bg-gray-500': true,
+      'focus:ring-gray-50': true,
+      'text-gray-700': true,
+    },
+  };
 
   getButtonClass() {
-    return {
-      'text-white': this.color !== 'gray-light',
-      'text-gray-800': this.color === 'gray-light',
-      'bg-blue-700 hover:bg-blue-800': this.color === 'primary',
-      'bg-green-700 hover:bg-green-800': this.color === 'success',
-      'bg-gray-700 hover:bg-gray-800': this.color === 'gray',
-      'bg-gray-200 hover:bg-gray-300': this.color === 'gray-light',
-    };
+    const color = this.mapColors[this.color];
+    if (color) {
+      return color;
+    }
+    return {};
   }
 }
